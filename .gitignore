@@ -1,0 +1,5 @@
+# Visual Studio Code Configuration files
+.vscode/
+
+# WSL2 trash files
+*Zone.Identifier
