@@ -3,3 +3,6 @@
 
 # WSL2 trash files
 *Zone.Identifier
+
+# Node modules
+node_modules
