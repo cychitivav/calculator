@@ -14,7 +14,7 @@ function Header() {
 
 			<form onChange={handleThemeChange}>
 				<legend>THEME</legend>
-				<input type="radio" name="theme" value="1" id="1" />
+				<input type="radio" name="theme" value="1" id="1" checked />
 				<label htmlFor="1">1</label>
 				<input type="radio" name="theme" value="2" id="2" />
 				<label htmlFor="2">2</label>
