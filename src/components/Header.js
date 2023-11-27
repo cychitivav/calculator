@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../App";
 
 function Header() {
+	const { setTheme } = useContext(ThemeContext);
+
+	const handleThemeChange = (e) => {
+		setTheme(e.target.value);
+	};
+
 	return (
 		<header>
 			<h1>calc</h1>
 
-			<form>
-                <legend>THEME</legend>
+			<form onChange={handleThemeChange}>
+				<legend>THEME</legend>
 				<input type="radio" name="theme" value="1" id="1" />
 				<label htmlFor="1">1</label>
 				<input type="radio" name="theme" value="2" id="2" />
