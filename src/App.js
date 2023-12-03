@@ -7,6 +7,10 @@ import Display from "./components/Display";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { ComputationProvider } from "./contexts/ComputationContext";
 
+import "./styles/theme-1.css";
+import "./styles/theme-2.css";
+import "./styles/theme-3.css";
+
 function App() {
 	return (
 		<ThemeProvider>

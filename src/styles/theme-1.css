@@ -1,0 +1,50 @@
+body {
+	background-color: hsl(222, 26%, 31%);
+	color: white;
+}
+
+header form fieldset {
+	background-color: hsl(223, 31%, 20%);
+}
+
+header form fieldset input:checked {
+	background-color: hsl(6, 63%, 50%);
+}
+
+form#interface > output {
+	background-color: hsl(224, 36%, 15%);
+}
+
+div.keyboard {
+	background-color: hsl(223, 31%, 20%);
+}
+
+div.keyboard > input {
+	background-color: hsl(30, 25%, 89%);
+	color: hsl(221, 14%, 31%);
+	box-shadow: 0 0.2rem 0 hsl(28, 16%, 65%);
+}	
+
+div.keyboard > input:active {
+	background-color: white;
+}
+
+div.keyboard > input.special-key {
+	background-color: hsl(225, 21%, 49%);
+	box-shadow: 0 0.2rem 0 hsl(224, 28%, 35%);
+	color: white;
+}
+
+div.keyboard > input.special-key:active {
+	background-color: hsl(224, 51%, 76%);
+}
+
+div.keyboard > input.equals-key {
+	background-color: hsl(6, 63%, 50%);
+	box-shadow: 0 0.2rem 0 hsl(6, 70%, 34%);
+	color: white;
+}
+
+div.keyboard > input.equals-key:active {
+	background-color: hsl(6, 93%, 67%);
+}
