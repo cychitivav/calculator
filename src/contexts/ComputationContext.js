@@ -7,6 +7,9 @@ export function ComputationProvider({ children }) {
 	const [expression, setExpression] = useState("");
 
 	const updateExpression = (value) => {
+		if (expression === "Syntax Error") {
+			setExpression("");
+		}
 		switch (value) {
 			case "DEL":
 				setExpression(expression.slice(0, -1));
