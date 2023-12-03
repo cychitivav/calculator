@@ -10,7 +10,7 @@ export function ComputationProvider({ children }) {
 		switch (value) {
 			case "DEL":
 				if (expression === "Syntax Error") {
-					setExpression("0");
+					setExpression("");
 				} else {
 					setExpression(expression.slice(0, -1));
 				}
@@ -20,7 +20,8 @@ export function ComputationProvider({ children }) {
 				break;
 			case "=":
 				try {
-					setExpression(evaluate(expression.replace("x", "*")));
+					let answer = evaluate(expression.replace("x", "*"));
+					setExpression(answer ? String(answer) : "");
 				} catch {
 					setExpression("Syntax Error");
 				}
