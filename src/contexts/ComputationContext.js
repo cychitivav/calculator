@@ -15,7 +15,11 @@ export function ComputationProvider({ children }) {
 				setExpression("");
 				break;
 			case "=":
-				setExpression(evaluate(expression));
+				try {
+					setExpression(evaluate(expression));
+				} catch {
+					setExpression("Syntax Error");
+				}
 				break;
 			default:
 				setExpression(expression + value);
