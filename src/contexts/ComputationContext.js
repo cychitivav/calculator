@@ -7,12 +7,13 @@ export function ComputationProvider({ children }) {
 	const [expression, setExpression] = useState("");
 
 	const updateExpression = (value) => {
-		if (expression === "Syntax Error") {
-			setExpression("");
-		}
 		switch (value) {
 			case "DEL":
-				setExpression(expression.slice(0, -1));
+				if (expression === "Syntax Error") {
+					setExpression("0");
+				} else {
+					setExpression(expression.slice(0, -1));
+				}
 				break;
 			case "RESET":
 				setExpression("");
@@ -25,7 +26,11 @@ export function ComputationProvider({ children }) {
 				}
 				break;
 			default:
-				setExpression(expression + value);
+				if (expression === "Syntax Error") {
+					setExpression(value);
+				} else {
+					setExpression(expression + value);
+				}
 		}
 	};
 
