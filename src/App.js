@@ -1,21 +1,23 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
-import Display from "./components/Display";
-import Keyboard from "./components/Keyboard";
+import React from "react";
 
-export const ThemeContext = React.createContext();
+import Header from "./components/Header";
+import Keyboard from "./components/Keyboard";
+import Display from "./components/Display";
+
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { ComputationProvider } from "./contexts/ComputationContext";
 
 function App() {
-	const [theme, setTheme] = useState("1");
-
 	return (
-		<ThemeContext.Provider value={{ theme, setTheme }}>
+		<ThemeProvider>
 			<Header />
-			<form>
-				<Display />
-				<Keyboard />
-			</form>
-		</ThemeContext.Provider>
+			<ComputationProvider>
+				<form id="interface">
+					<Display />
+					<Keyboard />
+				</form>
+			</ComputationProvider>
+		</ThemeProvider>
 	);
 }
 

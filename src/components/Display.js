@@ -1,9 +1,12 @@
 import React from "react";
+import { useComputation } from "../contexts/ComputationContext";
 
-function Display({ value }) {
+function Display() {
+	const { expression } = useComputation();
+
 	return (
 		<>
-			<output>res</output>
+			<output>{expression ? expression.toLocaleString() : "0"}</output>
 		</>
 	);
 }
