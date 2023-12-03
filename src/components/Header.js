@@ -22,11 +22,11 @@ function Header() {
 				document.documentElement.style.setProperty("--distance", "0");
 		}
 
-		e.target.style.animation = "move 2s ease 1 normal";
+		e.target.style.animation = "move 1s ease 1 normal";
 
 		setTimeout(() => {
 			e.target.style.animation = "";
-		}, 2000);
+		}, 1000);
 		setTheme(e.target.value);
 	};
 
