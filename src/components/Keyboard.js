@@ -20,7 +20,7 @@ function Keyboard() {
 		".",
 		"0",
 		"/",
-		"*",
+		"x",
 		"RESET",
 		"=",
 	];

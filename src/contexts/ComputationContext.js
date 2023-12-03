@@ -20,7 +20,7 @@ export function ComputationProvider({ children }) {
 				break;
 			case "=":
 				try {
-					setExpression(evaluate(expression));
+					setExpression(evaluate(expression.replace("x", "*")));
 				} catch {
 					setExpression("Syntax Error");
 				}
