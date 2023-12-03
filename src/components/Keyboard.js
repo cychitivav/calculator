@@ -34,6 +34,13 @@ function Keyboard() {
 						value={key}
 						key={key}
 						onClick={() => updateExpression(key)}
+						className={
+							key === "RESET" || key === "DEL"
+								? "special-key"
+								: key === "="
+								? "equals-key"
+								: ""
+						}
 					/>
 				))}
 			</div>

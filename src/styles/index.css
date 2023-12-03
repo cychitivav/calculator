@@ -1,17 +1,30 @@
-* {
+:root, * {
 	margin: 0;
 	padding: 0;	
 	color: inherit;
-	min-width: fit-content;
 	font-family: 'League Spartan', sans-serif;
 	font-weight: 700;
+	box-sizing: border-box;
+	font-size: inherit;
 }
 
 body {
 	display: flex;
+	height: 100vh;
 	align-items: center;
 	justify-content: center;
-	background-color: hsl(222, 26%, 31%);
+	font-size: 32px;
+	overflow-x: hidden;
+}
+
+div#root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 500px;
+	margin: 1.5rem;
 }
 
 header {
@@ -19,9 +32,101 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	max-width: 500px;
-	min-width: 100%;
-	margin: 1rem;
-	background-color: green;
-	color: white;
+	margin: 2rem 0 1rem;
+}
+
+header > h1 {
+	font-size: 1.8rem;
+}		
+
+header > form {	
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header h2 {
+	margin-right: 2rem;
+}
+
+header form fieldset {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border: none;
+	padding: 0.2rem;
+	border-radius: 0.7rem;
+	min-width: 4rem;
+}
+
+header form fieldset input {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+	width: 0.9rem;
+	height: 0.9rem;	
+	padding: auto;
+}
+
+header form fieldset label {
+	position: relative;
+	width: 0;
+	height: 0;
+	top: -1.5rem;
+	left: -0.8rem;
+}
+
+form#interface {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+form#interface > output {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 45px;
+	width: 100%;
+	padding: 0.7em 1rem;
+	margin: 1.5rem 0;
+	border-radius: 0.5rem;
+}
+
+div.keyboard {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1.5rem;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+div.keyboard > input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em;
+	border: none;
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+
+div.keyboard > input.special-key {
+	font-size: 20px;
+}
+
+div.keyboard > input:nth-last-child(1),
+div.keyboard > input:nth-last-child(2) {
+    grid-column: span 2;
+}
+
+@media screen and (min-width: 768px) {
+
+	div.keyboard {
+		gap: 1rem;
+	}
 }
