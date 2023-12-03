@@ -38,5 +38,6 @@
   },
   "author": "Cristian Chitiva <cychitivav@unal.edu.co>",
   "license": "MIT",
-  "description": "Calculator made with React"
+  "description": "Calculator made with React",
+  "homepage": "calculator"
 }
