@@ -68,6 +68,7 @@ header form fieldset input {
 	width: 0.9rem;
 	height: 0.9rem;	
 	padding: auto;
+	cursor: pointer;
 }
 
 header form fieldset label {

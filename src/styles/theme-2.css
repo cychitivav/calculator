@@ -1,4 +1,54 @@
-body {
-    background-color: hsl(222, 26%, 31%);
-    color: white;
+body.second-theme {
+	background-color: hsl(0, 0%, 90%);
+	color: hsl(60, 10%, 19%);
+}
+
+header form fieldset.second-theme {
+	background-color: hsl(0, 5%, 81%);
+}
+
+header form fieldset input.second-theme:checked {
+	background-color: hsl(25, 98%, 40%)
+}
+
+header form fieldset input.second-theme:active:checked {
+	background-color: hsl(28, 89%, 59%)
+}
+
+form#interface > output.second-theme {
+	background-color: hsl(0, 0%, 93%);
+}
+
+div.keyboard.second-theme {
+	background-color: hsl(0, 5%, 81%);
+}
+
+div.keyboard > input.second-theme {
+	background-color: hsl(45, 7%, 89%);
+	color: hsl(221, 14%, 31%);
+	box-shadow: 0 0.2rem 0 hsl(35, 11%, 61%);
+}	
+
+div.keyboard > input.second-theme:active {
+	background-color: white;
+}
+
+div.keyboard > input.special-key.second-theme {
+	background-color: hsl(185, 42%, 37%);
+	box-shadow: 0 0.2rem 0 hsl(185, 58%, 25%);
+	color: white;
+}
+
+div.keyboard > input.special-key.second-theme:active {
+	background-color: hsl(185, 41%, 56%);
+}
+
+div.keyboard > input.equals-key.second-theme {
+	background-color: hsl(25, 98%, 40%);
+	box-shadow: 0 0.2rem 0 hsl(25, 99%, 27%);
+	color: white;
+}
+
+div.keyboard > input.equals-key.second-theme:active {
+	background-color: hsl(25, 100%, 61%);
 }

@@ -1,4 +1,53 @@
-body {
-    background-color: hsl(222, 26%, 31%);
-    color: white;
+body.third-theme {
+	background-color: hsl(268, 75%, 9%);
+	color: hsl(52, 100%, 62%);
+}
+
+header form fieldset.third-theme {
+	background-color: hsl(268, 71%, 12%);
+}
+
+header form fieldset input.third-theme:checked {
+	background-color: hsl(176, 100%, 44%)
+}
+
+header form fieldset input.third-theme:active:checked {
+	background-color: hsl(177, 100%, 79%)
+}
+
+form#interface > output.third-theme {
+	background-color: hsl(268, 71%, 12%);
+}
+
+div.keyboard.third-theme {
+	background-color: hsl(268, 71%, 12%);
+}
+
+div.keyboard > input.third-theme {
+	background-color: hsl(268, 47%, 21%);
+	box-shadow: 0 0.2rem 0 hsl(290, 70%, 36%);
+}	
+
+div.keyboard > input.third-theme:active {
+	background-color: hsl(268, 54%, 44%);
+}
+
+div.keyboard > input.special-key.third-theme {
+	background-color: hsl(281, 89%, 26%);
+	box-shadow: 0 0.2rem 0 hsl(285, 91%, 52%);
+	color: white;
+}
+
+div.keyboard > input.special-key.third-theme:active {
+	background-color: hsl(280, 56%, 44%);
+}
+
+div.keyboard > input.equals-key.third-theme {
+	background-color: hsl(176, 100%, 44%);
+	box-shadow: 0 0.2rem 0 hsl(177, 92%, 70%);
+	color: hsl(198, 20%, 13%);
+}
+
+div.keyboard > input.equals-key.third-theme:active {
+	background-color: hsl(177, 100%, 79%);
 }
