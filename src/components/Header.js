@@ -2,11 +2,32 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 function Header() {
-	const { setTheme } = useContext(ThemeContext);
+	const { theme, setTheme } = useContext(ThemeContext);
 
 	const handleThemeChange = (e) => {
+		switch (e.target.value - theme) {
+			case 1:
+				document.documentElement.style.setProperty("--distance", "-1.2rem");
+				break;
+			case 2:
+				document.documentElement.style.setProperty("--distance", "-2.4rem");
+				break;
+			case -1:
+				document.documentElement.style.setProperty("--distance", "1.2rem");
+				break;
+			case -2:
+				document.documentElement.style.setProperty("--distance", "2.4rem");
+				break;
+			default:
+				document.documentElement.style.setProperty("--distance", "0");
+		}
+
+		e.target.style.animation = "move 2s ease 1 normal";
+
+		setTimeout(() => {
+			e.target.style.animation = "";
+		}, 2000);
 		setTheme(e.target.value);
-		console.log(`Theme changed to ${e.target.value}`);
 	};
 
 	return (
