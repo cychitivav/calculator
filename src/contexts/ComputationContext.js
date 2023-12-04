@@ -6,6 +6,8 @@ const ComputationContext = React.createContext();
 export function ComputationProvider({ children }) {
 	const [expression, setExpression] = useState("");
 
+	navigator.vibrate(100);
+
 	const updateExpression = (value) => {
 		switch (value) {
 			case "DEL":
